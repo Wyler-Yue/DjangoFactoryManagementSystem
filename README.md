@@ -1,0 +1,2 @@
+# DjangoFactoryManagementSystem
+这是学习制作Django设备管理系统的过程记录，同时学习GitHub的使用
