@@ -1,5 +1,4 @@
 # DjangoFactoryManagementSystem
-这是学习制作Django设备管理系统的过程记录，同时学习GitHub的使用
 
 网站已经部署在heroku，可以使用测试账号登录
 ```bash
