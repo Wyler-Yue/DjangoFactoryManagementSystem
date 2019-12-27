@@ -1,22 +1,19 @@
 # DjangoFactoryManagementSystem
 这是学习制作Django设备管理系统的过程记录，同时学习GitHub的使用
+
 网站已经部署在heroku，可以使用测试账号登录
 ```bash
 user: test0
 passwd: test0
 ```
 以下为网站链接：
-```
-curl https://factory-manage-test.herokuapp.com/index
-```
+https://factory-manage-test.herokuapp.com/index
+
 参考教程为刘江的博客教程-实战二：Django2.2之CMDB资产管理系统，以下为教程链接：
-```
-curl http://www.liujiangblog.com/course/django/116
-```
+http://www.liujiangblog.com/course/django/116
+
 感谢 @liangliangyy 的相关教程文档，以下为GitHub链接：
-```
-curl https://github.com/liangliangyy/DjangoBlog
-```
+https://github.com/liangliangyy/DjangoBlog
 
 基于`python3.8`和`Django2.2.8`
 ![image](https://github.com/Wyler-Yue/image/blob/master/%E7%BD%91%E7%AB%99%E8%AE%BE%E5%A4%87%E6%A6%82%E5%86%B5.png)
