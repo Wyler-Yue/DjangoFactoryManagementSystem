@@ -65,7 +65,7 @@ python manage.py runserver
 ![image](https://github.com/Wyler-Yue/image/blob/master/%E7%BD%91%E7%AB%99%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2.png)
 
 ### 另附完整Linux部署展示 
-```bash
+```linux
 git clone https://github.com/Wyler-Yue/DjangoFactoryManagementSystem.git
 cd DjangoFactoryManagementSystem/
 mkdir -p env && cd env
