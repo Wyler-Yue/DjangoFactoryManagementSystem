@@ -7,12 +7,15 @@ user: test0
 passwd: test0
 ```
 以下为网站链接：
+
 https://factory-manage-test.herokuapp.com/index
 
 参考教程为刘江的博客教程-实战二：Django2.2之CMDB资产管理系统，以下为教程链接：
+
 http://www.liujiangblog.com/course/django/116
 
 感谢 @liangliangyy 的相关教程文档，以下为GitHub链接：
+
 https://github.com/liangliangyy/DjangoBlog
 
 基于`python3.8`和`Django2.2.8`
