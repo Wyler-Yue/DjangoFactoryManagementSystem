@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}修改巡检信息{% endblock %}
+{% block css %}
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'adminlet-2.4.10/dist/css/AdminLTE.min.css' %}">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{% static 'adminlet-2.4.10/dist/css/skins/_all-skins.min.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        修改巡检信息
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li>巡检信息</li>
+        <li class="active">修改巡检信息</li>
+      </ol>
+    </section>
+
+
+    <div class="container">
+        <div class="col-md-offset-4 col-md-4">
+            <form class="form-register"  method="post">
+                {% if message %}
+                    <div class="alert alert-warning">{{ message }}</div>
+                {% endif %}
+                {% csrf_token %}
+
+                <h2 class="text-center">修改巡检信息</h2>
+
+                <div class="form-group">
+                    {{ inspection_from.id.label_tag }}
+                    {{ inspection_from.id }}
+                </div>
+                <div class="form-group">
+
+                    {{ inspection_from.time.label_tag }}
+                    {{ inspection_from.time }}
+                </div>
+                <div class="form-group">
+                    {{ inspection_from.name.label_tag }}
+                    {{ inspection_from.name }}
+                </div>
+                <div class="form-group">
+                    {{ inspection_from.results.label_tag }}
+                    {{ inspection_from.results }}
+                </div>
+                <div class="form-group">
+                    {{ inspection_from.status.label_tag }}
+                    {{ inspection_from.status}}
+                </div>
+                <div class="form-group">
+                    {{ inspection_from.worker.label_tag }}
+                    {{ inspection_from.worker }}
+                </div>
+                <button type="reset" class="btn btn-default pull-left">重置</button>
+                <button type="submit" class="btn btn-primary pull-right">提交</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

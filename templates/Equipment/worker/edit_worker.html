@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}修改人员信息{% endblock %}
+{% block css %}
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'adminlet-2.4.10/dist/css/AdminLTE.min.css' %}">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{% static 'adminlet-2.4.10/dist/css/skins/_all-skins.min.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        修改人员信息
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li>人员信息</li>
+        <li class="active">修改人员信息</li>
+      </ol>
+    </section>
+
+
+    <div class="container">
+        <div class="col-md-offset-4 col-md-4">
+            <form class="form-register"  method="post">
+                {% if message %}
+                    <div class="alert alert-warning">{{ message }}</div>
+                {% endif %}
+                {% csrf_token %}
+
+                <h2 class="text-center">修改人员信息</h2>
+
+                <div class="form-group">
+                    {{ worker_from.id.label_tag }}
+                    {{ worker_from.id }}
+                </div>
+                <div class="form-group">
+                    {{ worker_from.name.label_tag }}
+                    {{ worker_from.name }}
+                </div>
+                <div class="form-group">
+                    {{ worker_from.number.label_tag }}
+                    {{ worker_from.number}}
+                </div>
+                <div class="form-group">
+                    {{ worker_from.duty.label_tag }}
+                    {{ worker_from.duty }}
+                </div>
+                <button type="reset" class="btn btn-default pull-left">重置</button>
+                <button type="submit" class="btn btn-primary pull-right">提交</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

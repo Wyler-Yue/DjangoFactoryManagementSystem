@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}删除设备{% endblock %}
+{% block css %}
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'adminlet-2.4.10/dist/css/AdminLTE.min.css' %}">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{% static 'adminlet-2.4.10/dist/css/skins/_all-skins.min.css' %}">
+
+{% endblock %}
+{% block content %}
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        删除设备
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li>设备信息</li>
+        <li class="active">删除设备</li>
+      </ol>
+    </section>
+
+
+    <div class="container">
+        <div class="col-md-offset-4 col-md-4">
+            <form class="form-register" action="/add_equipment/" method="post">
+                {% if message %}
+                    <div class="alert alert-warning">{{ message }}</div>
+                {% endif %}
+                {% csrf_token %}
+
+                <h2 class="text-center">删除设备</h2>
+
+                <div class="form-group">
+                    {{ equipment_from.id.label_tag }}
+                    {{ equipment_from.id }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.name.label_tag }}
+                    {{ equipment_from.name }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_form.specifications.label_tag }}
+                    {{ equipment_form.specifications }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.device_type.label_tag }}
+                    {{ equipment_from.device_type }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.status.label_tag }}
+                    {{ equipment_from.status}}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.site.label_tag }}
+                    {{ equipment_from.site }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.director.label_tag }}
+                    {{ equipment_from.director }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.manufacturer.label_tag }}
+                    {{ equipment_from.manufacturer }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.distributor.label_tag }}
+                    {{ equipment_from.distributor }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.purchase_time.label_tag }}
+                    {{ equipment_from.purchase_time }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.use_time.label_tag }}
+                    {{ equipment_from.use_time }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.number.label_tag }}
+                    {{ equipment_from.number }}
+                </div>
+                <div class="form-group">
+                    {{ equipment_from.parameter.label_tag }}
+                    {{ equipment_from.parameter }}
+                </div>
+                <button type="reset" class="btn btn-default pull-left">重置</button>
+                <button type="submit" class="btn btn-primary pull-right">删除</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
