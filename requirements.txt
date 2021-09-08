@@ -3,7 +3,7 @@ Django==2.2.8
 django-ranged-response==0.2.0
 django-simple-captcha==0.5.12
 image==1.5.27
-Pillow==6.2.1
+Pillow==8.3.2
 Pillow-PIL==0.1.dev0
 pillow-scripts==5.0.0
 pytz==2019.3
